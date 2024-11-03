@@ -1,11 +1,3 @@
-# HTML Document for Kashmiri Free Page
-
-## Requirement Summary
-This document outlines the structure of an HTML page designed for a project titled "Kashmiri Free Page." The page includes a navigation bar, sections for content, and a footer, all styled for a clean and professional appearance.
-
-## Code Generated #1: Basic HTML Structure
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +25,15 @@ This document outlines the structure of an HTML page designed for a project titl
             display: inline;
             margin: 0 15px;
         }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #35424a;
+            padding: 10px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
         section {
             padding: 20px;
             margin: 10px;
@@ -53,7 +54,12 @@ This document outlines the structure of an HTML page designed for a project titl
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Projects</a>
+                    <ul>
+                        <li><a href="project.html">Create a Project</a></li>
+                        <li><a href="build.html">Set Build Options</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -68,7 +74,7 @@ This document outlines the structure of an HTML page designed for a project titl
         <p>In a world where knowledge and stories can transform lives...</p>
     </section>
     <footer>
-        <p>&copy; 2023 Muft Maal. All rights reserved.</p>
+        <p>&copy; 2024 Muft Maal. All rights reserved.</p>
     </footer>
 </body>
 </html>
