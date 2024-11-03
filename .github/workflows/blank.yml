@@ -4,7 +4,7 @@
 <head>
   html_document
     <meta charset="UTF-8">
-    theme: flatly # specifies the theme
+    theme: flatly
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 navbar:
     <title>Kashmiri Free Page</title>
