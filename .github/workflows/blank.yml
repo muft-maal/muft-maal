@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  html_document:
+  html_document
     <meta charset="UTF-8">
     theme: flatly # specifies the theme
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
