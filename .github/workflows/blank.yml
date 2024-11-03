@@ -1,4 +1,4 @@
-name: "Enhanced Rmarkdown Website"
+name: "[![Enhanced Rmarkdown Website](https://github.com/muft-maal/muft-maal/actions/workflows/blank.yml/badge.svg)](https://github.com/muft-maal/muft-maal/actions/workflows/blank.yml)"
 on:
   push:
     branches:
