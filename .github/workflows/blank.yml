@@ -1,33 +1,63 @@
 <!DOCTYPE html>
+name: "Enhanced Rmarkdown Website"
 <html lang="en">
+navbar:
 <head>
+  left:
     <meta charset="UTF-8">
+    - text: "Home"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      href: index.html
     <title>Kashmiri Free Page</title>
+    - text: "Getting Started"
     <style>
+      menu:
         body {
+        - text: "Create a Project"
             font-family: Arial, sans-serif;
+          href: project.html
             margin: 0;
+        - text: "Set Build Options"
             padding: 0;
+          href: build.html
             background-color: #f4f4f4;
+        - text: "Create a _site.yml"
         }
+          href: create_yml.html
         header {
+    - text: "Resources"
             background: #35424a;
+      menu: 
             color: #CECECE;
+        - text: "Tables and Plots"
             padding: 10px 0;
+          href: tables_plots.html
             text-align: center;
+        - text: "Include Images"
         }
+          href: images.html
         nav ul {
+        - text: "Embed a webpage"
             list-style: none;
+          href: embed.html
             padding: 0;
+    - text: "Support"
         }
+      menu: 
         nav ul li {
+        - text: "Publishing"
             display: inline;
+          href: publishing.html
             margin: 0 15px;
+        - text: "Updating"
         }
+          href: updating.html
         nav ul li ul {
+        - text: "FAQs"
             display: none;
+          href: faqs.html
             position: absolute;
+output_dir: "."
             background: #35424a;
             padding: 10px;
         }
