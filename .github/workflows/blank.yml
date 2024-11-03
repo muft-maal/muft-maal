@@ -1,29 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
+output:
 <head>
+  html_document:
     <meta charset="UTF-8">
+    theme: flatly # specifies the theme
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+navbar:
     <title>Kashmiri Free Page</title>
+  left:
     <style>
+    - text: "Home"
         body {
+      href: index.html
             font-family: Arial, sans-serif;
+    - text: "Create a Project"
             margin: 0;
+      href: project.html
             padding: 0;
+    - text: "Set Build Options"
             background-color: #0c0101;
+      href: build.html
         }
+    - text: "Create a _site.yml"
         header {
+      href: create_yml.html
             background: #35424a;
+    - text: "Tables and Plots"
             color: #CECECE;
+      href: tables_plots.html
             padding: 10px 0;
+    - text: "Include Images"
             text-align: center;
+      href: images.html
         }
+    - text: "Embed a webpage"
         nav ul {
+      href: embed.html
             list-style: none;
+    - text: "Themes"
             padding: 0;
+      href: theme.html
         }
+    - text: "Publishing your site"
         nav ul li {
+      href: publishing.html
             display: inline;
+output_dir: "." # if publishing on Github pages
             margin: 0 15px;
+Bear in mind that the more menu items we add the more the size of the navigation bar at the top will increase. This can lead to the page not displaying properly.
         }
         section {
             padding: 20px;
@@ -53,59 +79,59 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! My name is Amaan Tahir, and I am passionate about the transformative power of reading. As a dedicated book provider, I believe that access to literature should be universal and free for everyone. My mission is to make a diverse array of books available to readers of all ages and backgrounds, fostering a love for literature and learning.
-
+ 
+ 
             With a carefully curated collection that spans genres—from classic literature and contemporary fiction to informative non-fiction and enriching children's books—I strive to ensure that there is something for everyone. I understand the joy and inspiration that stories can bring, and I am committed to supporting your reading journey.
-            
+To solve this use sub-menus as in the _site.yml for this site (see below).
+
             Whether you're looking for a new favorite novel, a thought-provoking memoir, or resources for personal growth, I'm here to help you discover your next great read, all at no cost. Join me as we explore the wonderful world of books together—because everyone deserves the chance to experience the magic of reading!.</p>
     </section>
     <section id="projects">
         <h2>My Projects</h2>
-
+ 
+ 
         <p>### Project Overview: "A Vision for Accessible Literature"
-
+name: "Create a simple Rmarkdown website"
+navbar:
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Getting Started"
+      menu:
+        - text: "Create a Project"
+          href: project.html
+        - text: "Set Build Options"
+          href: build.html
+        - text: "Create a _site.yml"
+          href: create_yml.html
+    - text: "Add Features"
+      menu: 
+        - text: "Tables and Plots"
+          href: tables_plots.html
+        - text: "Include Images"
+          href: images.html
+        - text: "Embed a webpage"
+          href: embed.html
+    - text: "Publish and Update"      
+      menu: 
+        - text: "Publishing"
+          href: publishing.html
+        - text: "Updating"
+          href: updating.html
+output_dir: "."
+The key to this is to open a new menu heading as follows and then specify the items. text refers to the text for the menu button and the menu will group the pages that you specify. Note that the tab indents matter and if something goes wrong you have probably forgotten the - text for the menu heading or to indent uniformly.
+ 
+ 
             #### Introduction
+- text: "Publish and Update"      
             In a world where knowledge and stories can transform lives, I recognized a pressing need for greater access to literature, particularly for those who may face barriers in obtaining books. With this vision in mind, I embarked on a project that reflects my dedication and hard work in providing a free book service to communities in need. This project not only aims to supply books but also to foster a culture of reading and learning.
-            
+      menu: 
+
+        - text: "Publishing"
             #### Background
+          href: publishing.html
             Having always been an avid reader and a firm believer in the importance of literature, I understood how transformative books could be in shaping thoughts, expanding horizons, and encouraging empathy. However, I also saw that many individuals faced obstacles—be it financial constraints, lack of access to libraries, or limited exposure to diverse literature. This realization fueled my determination to make a change.
-            
+        - text: "Updating"
+
+          href: updating.html
             #### Objectives
-            The primary objectives of my project include:
-            1. **Increase Accessibility**: To provide free access to a diverse range of books for all age groups and demographics.
-            2. **Foster a Love for Reading**: To create opportunities for people to discover new authors, genres, and subjects.
-            3. **Build Community**: To establish a network of readers who can share insights, join discussions, and encourage one another in their reading journeys.
-            
-            #### Implementation Steps
-            To bring my vision to life, I undertook several steps:
-            
-            1. **Collection Drive**: I organized book drives within my local community, reaching out to schools, libraries, and individuals to donate gently used books. This grassroots effort not only increased available titles but also engaged community members in my mission.
-            
-            2. **Online Platform**: I developed a user-friendly website where users could easily browse the collection, request books, and share their reading experiences. This platform also includes resources such as reading guides, recommendations, and tips for cultivating a reading habit.
-            
-            3. **Community Events**: I planned and hosted various events, including book fairs, reading clubs, and author sessions. These events served as a catalyst for building a community of readers while promoting literacy in a fun, engaging manner.
-            
-            4. **Partnerships**: I collaborated with local schools, community centers, and non-profit organizations to reach underserved populations, ensuring that my services were accessible to those who needed them the most.
-            
-            #### Challenges Faced
-            Throughout this journey, I encountered several challenges, including:
-            - **Funding**: Securing resources for shipping and handling costs was an ongoing hurdle. However, through local sponsorships and small grants, I managed to sustain the project.
-            - **Awareness**: I needed to promote the project effectively to reach potential readers. By leveraging social media and local outreach, I successfully increased visibility.
-            
-            #### Results
-            The project has yielded significant outcomes, such as:
-            - **Growth of the Collection**: I successfully collected over [insert number] books within the first year, covering a wide range of genres and topics.
-            - **Community Engagement**: Attendance at events steadily increased, with hundreds of community members participating and providing positive feedback.
-            - **Increased Literacy**: Preliminary surveys indicated a rise in reading frequency among participants, with many expressing how access to free books has changed their lives.
-            
-            #### Conclusion
-            This project is a testament to my commitment to improving lives through literature. The hard work invested in establishing this free book service reflects my belief that reading should be an accessible joy for everyone. Moving forward, I am excited to continue expanding the collection, enhancing community engagement, and exploring new avenues for reaching even more readers. Together, we can cultivate a love for reading and transform our communities, one book at a time.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>muftmaal.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Kashmiri Open Page</p>
-    </footer>
-</body>
-</html>
