@@ -1,24 +1,33 @@
-name: "[ https://github.com/muft-maal/muft-maal/actions/workflows/blank.yml]
+yaml
+name: Node.js CI
+
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Cache R packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/R
-          key: ${{ runner.os }}-R-${{ hashFiles('**/DESCRIPTION') }}
-          restore-keys: |
-            ${{ runner.os }}-R-
-      - name: Install dependencies
-        run: |
-          Rscript -e "install.packages('rmarkdown')"
-      - name: Build site
-        run: |
-          Rscript -e "rmarkdown::render_site()"
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16' # Specify the Node.js version to use
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build application
+      run: npm run build # If you have a build step, otherwise you can remove this step
